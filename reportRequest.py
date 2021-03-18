@@ -4,10 +4,11 @@ import os
 from credentials import *
 from reports import *
 from datetime import date
-from mws import Products, Reports, Marketplaces, Inventory
+from mws import Reports
 
 today = date.today()
 
+#Create a file (credentials.py) with the following variables and import it here
 account_id = MWS_ACCOUNT_ID
 access_key = MWS_ACCESS_KEY
 secret_key = MWS_SECRET_KEY
@@ -20,6 +21,7 @@ reports_api = Reports(
 
 reports_api._use_feature_mwsresponse = True
 
+#Dont need to touch any of this code
 def requestReport(reportName):
     print("Requesting Report")
     reportRequest = reports_api.request_report(reportName)
@@ -77,4 +79,5 @@ def writeFile(report, reportType):
 
     print("Done")
 
+#From the reports.py file enter the name for the report you would like to get into the requestReport function below
 requestReport(FBA_INVENTORY_AFN)
