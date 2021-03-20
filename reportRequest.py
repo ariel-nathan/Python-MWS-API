@@ -8,7 +8,7 @@ from mws import Reports
 
 today = date.today()
 
-#Create a file (credentials.py) with the following variables and import it here
+#Create a file (credentials.py) with the following variables and import it
 account_id = MWS_ACCOUNT_ID
 access_key = MWS_ACCESS_KEY
 secret_key = MWS_SECRET_KEY
